@@ -2,22 +2,23 @@
 
   <div class="gh-head-brand">
     <a class="gh-head-logo" href="{{@site.url}}">
-      {{#if @site.logo}}
       <img src="{{@site.logo}}" alt="{{@site.title}}" />
-      {{else}}
-      {{@site.title}}
-      {{/if}}
+      <div class="flex flex-col items-start w-20">
+        <h1 class="md:inline-block site-title text-sm font-bold leading-snug">
+          <span class="text-primary dark:text-primary-darker hover:text-black dark:hover:text-light-gray">{{@site.title}}</span>
+        </h1>
+      </div>
     </a>
-    <a class="gh-burger" role="button" aria-label="menu">
+    {{!-- <a class="gh-burger" role="button" aria-label="menu">
       <div class="gh-burger-box">
         <div class="gh-burger-inner"></div>
       </div>
-    </a>
+    </a> --}}
   </div>
   <div class="gh-head-menu">
     {{navigation}}
   </div>
-  <div class="gh-head-actions">
+  {{!-- <div class="gh-head-actions">
     <div class="gh-head-actions-list">
       {{search}}
       {{#if @site.members_enabled}}
@@ -28,5 +29,5 @@
       {{/if}}
       {{/if}}
     </div>
-  </div>
+  </div> --}}
 </nav>

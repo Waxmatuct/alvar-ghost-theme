@@ -1,16 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+// const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
     content: ["./*.hbs", "./**/*.hbs"],
     darkMode: "media", // or 'media' or 'class'
     theme: {
         extend: {},
         fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            header: ["Inter", "sans-serif"],
-            mono: [defaultTheme.fontFamily.mono],
-            blog: ["Inter", "sans-serif"],
+            sans: ["Rubik", "sans-serif"],
+            mono: ["Ubuntu Mono", "monospace"],
         },
         colors: {
             // current: "currentColor",
