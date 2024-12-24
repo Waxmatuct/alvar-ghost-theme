@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {},
         fontFamily: {
-            sans: ["Rubik", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
             mono: ["Ubuntu Mono", "monospace"],
         },
         colors: {
