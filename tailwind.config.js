@@ -5,7 +5,11 @@ export default {
     content: ["./*.hbs", "./**/*.hbs"],
     darkMode: "media", // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            boxShadow: {
+                "3xl": "0 0 20px 2px rgba(0, 0, 0, 0.3)",
+            },
+        },
         fontFamily: {
             sans: ["Inter", "sans-serif"],
             mono: ["Ubuntu Mono", "monospace"],
