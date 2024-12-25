@@ -9,6 +9,9 @@ export default {
             boxShadow: {
                 "3xl": "0 0 20px 2px rgba(0, 0, 0, 0.3)",
             },
+            container: {
+                center: true,
+            },
         },
         fontFamily: {
             sans: ["Inter", "sans-serif"],

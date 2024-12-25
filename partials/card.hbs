@@ -50,13 +50,10 @@ Re-usable card for linking to posts
         </a>
         <div class="gh-card-content">
             <h3 class="gh-card-title"><a class="gh-card-link" href="{{url}}">{{title}}</a></h3>
-            <small class="gh-card-meta block"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY, dddd"}}</time> <span class="bull">&bull;</span> </small>
+            <small class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time> <span class="bull">&bull;</span> </small>
+            <small>
+              {{reading_time secondes="< 1 мин на чтение" minute="1 мин. на чтение" minutes="% минуты на чтение" }} </small>
             <p>{{excerpt characters="140"}}</p>
-            <div class="flex justify-between items-center">
-              <small class="gh-card-tag">{{tags separator=" &bull; "}}</small>
-              <small>
-                  {{reading_time secondes="< 1 мин на чтение" minute="1 мин. на чтение" minutes="% минуты на чтение" }}
-              </small>
-            </div>
+              <p class="gh-card-tag">{{tags separator=" &bull; "}}</p>
         </div>
 </article>

@@ -6,13 +6,13 @@
         {{#tag}}
         <header class="gh-page-head">
 
-            <h1>{{name}}</h1>
+            <h1 class="font-bold">{{name}}</h1>
 
             <p>
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                {{t "A collection of"}} {{plural ../pagination.total empty='постов' singular='% пост' plural='% постов'}}
                 {{/if}}
             </p>
 
