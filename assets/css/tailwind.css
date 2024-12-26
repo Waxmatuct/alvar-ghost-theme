@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-light-gray text-black font-sans dark:bg-dark dark:text-gray;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply text-dark dark:text-light-gray;
+    }
+    h1 {
+        @apply text-4xl;
+    }
+    h2 {
+        @apply text-3xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+    a {
+        @apply text-primary dark:text-primary-darker border-b border-primary hover:border-black dark:hover:border-light hover:text-black dark:hover:text-light border-opacity-30 dark:border-opacity-30 transition duration-300 ease-in-out;
+    }
+    /* ... */
+}
+
+@layer components {
+    header.gh-head {
+        @apply sticky mb-3 top-0 bg-light-gray dark:bg-dark z-50;
+    }
+
+    .gh-head-inner {
+        @apply md:flex max-w-7xl px-5 lg:px-0 py-4 mx-auto justify-between sm:justify-start md:justify-center lg:justify-start md:py-2;
+    }
+
+    .gh-head-logo {
+        @apply flex items-center self-start;
+    }
+
+    .gh-head-logo img {
+        @apply mr-2 w-10 h-10 rounded-full;
+    }
+
+    .gh-head-menu {
+        @apply hidden items-center justify-center sm:mx-8 sm:flex lg:mx-10;
+    }
+
+    .nav {
+        @apply flex list-none flex-col flex-wrap items-center space-x-0 space-y-1 sm:flex-row sm:space-x-3 sm:space-y-0;
+    }
+
+    .nav li a {
+        @apply relative block rounded-md border-0 px-4 py-2 text-black hover:bg-primary hover:text-light dark:text-light dark:hover:bg-primary-darker dark:hover:text-light-white;
+    }
+
+    .gh-head-actions-list {
+        @apply flex items-center space-x-5;
+    }
+
+    .gh-button {
+        @apply block rounded-md border-0 bg-primary px-4 py-2 text-light hover:text-light dark:text-light-white dark:hover:bg-primary-darker dark:hover:text-light-white;
+    }
+
+    .gh-page {
+        @apply max-w-7xl mx-auto;
+    }
+
+    .gh-container {
+        @apply space-y-5;
+    }
+
+    .gh-postfeed {
+        @apply mx-auto grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10;
+    }
+
+    .gh-card {
+        @apply overflow-hidden rounded-xl bg-light transition duration-300 ease-in-out hover:shadow-3xl dark:bg-dark-lighter;
+    }
+
+    .gh-postfeed .featured {
+        @apply order-first;
+    }
+
+    .gh-card-title {
+        @apply text-2xl/tight;
+    }
+    .gh-card-link {
+        @apply border-0 font-bold text-black hover:text-primary dark:text-light-white dark:hover:text-primary-darker;
+    }
+
+    .gh-card-picture {
+        @apply block max-h-60 overflow-hidden;
+    }
+
+    .gh-card-content {
+        @apply space-y-3 p-5 pt-3;
+    }
+
+    .gh-card-content p {
+        @apply text-sm;
+    }
+
+    .gh-card-tag {
+        @apply uppercase font-bold;
+    }
+
+    .gh-card-tag > a {
+        @apply border-0 text-xs;
+    }
+
+    .gh-card-meta {
+        @apply flex justify-between;
+    }
+
+    .gh-article {
+        @apply mx-auto max-w-4xl px-2 lg:px-0;
+    }
+
+    .gh-title {
+        @apply my-6 text-center font-bold lg:text-5xl;
+    }
+
+    .gh-post-tag {
+        @apply my-5 border-0 text-center font-bold uppercase;
+    }
+
+    .gh-post-meta {
+        @apply text-center text-sm mb-10;
+    }
+
+    /* .gh-content {
+        @apply space-y-5;
+    } */
+
+    .gh-content p {
+        @apply my-5 max-w-3xl first:my-0 last:my-0 lg:text-lg;
+    }
+
+    .gh-content code {
+        @apply rounded-md font-mono lg:text-base;
+    }
+
+    .gh-content blockquote {
+        @apply my-5 border-l-7 border-primary py-1 pl-3 italic dark:border-primary-darker;
+    }
+
+    .gh-content pre {
+        @apply my-6 overflow-x-auto bg-black py-3 pl-3 font-mono text-sm text-light-gray sm:text-base md:max-w-screen-md lg:max-w-full dark:bg-gray dark:text-dark;
+    }
+
+    .gh-content h1,
+    .gh-content h2,
+    .gh-content h3 {
+        @apply mb-3 mt-7 font-bold;
+    }
+
+    .gh-content .caption {
+        @apply mb-5 max-w-3xl text-center text-sm;
+    }
+
+    .gh-content table {
+        @apply my-5;
+    }
+    .gh-content table caption {
+        @apply my-2;
+    }
+    .gh-content th {
+        @apply border px-4 py-3 text-center font-semibold uppercase;
+    }
+
+    .gh-content td {
+        @apply text-center py-3 px-4 border;
+    }
+
+    .gh-content ol li,
+    .gh-content ul li {
+        @apply list-inside;
+    }
+
+    .gh-content ol,
+    .gh-content ul {
+        @apply ml-4 my-4;
+    }
+
+    .gh-content ol li {
+        @apply list-decimal;
+    }
+
+    .gh-content ul li {
+        @apply list-disc;
+    }
+
+    .gh-content img {
+        @apply my-4 max-w-full rounded-md;
+    }
+
+    .gh-readmore {
+        @apply mx-auto mt-10 max-w-7xl py-5;
+    }
+
+    .gh-readmore-inner {
+        @apply mt-5 flex w-full justify-around;
+    }
+    .gh-readmore svg {
+        @apply max-w-5;
+    }
+
+    .gh-readmore-next > a,
+    .gh-readmore-prev > a {
+        @apply flex w-full space-x-5 border-0;
+    }
+}
+
+pre {
+    code {
+        color: inherit;
+        background-color: transparent;
+        padding: 0;
+        display: block;
+    }
+    .line-number {
+        display: block;
+        float: left;
+        margin: 0 1em 0 -1em;
+        border-right: 1px solid #ddd;
+        text-align: right;
+        span {
+            display: block;
+            padding: 0 0.5em 0 1em;
+            color: #ccc;
+        }
+    }
+    .cl {
+        display: block;
+        clear: both;
+    }
+}

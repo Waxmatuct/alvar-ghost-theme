@@ -49,11 +49,13 @@ Re-usable card for linking to posts
         {{/if}}
         </a>
         <div class="gh-card-content">
+            <p class="gh-card-tag">{{tags separator=" &bull; "}}</p>
             <h3 class="gh-card-title"><a class="gh-card-link" href="{{url}}">{{title}}</a></h3>
-            <small class="gh-card-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time> <span class="bull">&bull;</span> </small>
-            <small>
-              {{reading_time secondes="< 1 мин на чтение" minute="1 мин. на чтение" minutes="% минуты на чтение" }} </small>
             <p>{{excerpt characters="140"}}</p>
-              <p class="gh-card-tag">{{tags separator=" &bull; "}}</p>
+            <div class="gh-card-meta">
+              <small><time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time></small>
+              <small>
+                {{reading_time secondes="< 1 мин на чтение" minute="1 мин. на чтение" minutes="% минуты на чтение" }} </small>
+            </div>
         </div>
 </article>
