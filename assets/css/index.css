@@ -25,3 +25,5 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "ghost/pagination.css";
 @import "ghost/comments.css"; */
 @import "tailwind.css";
+@import "pre.css";
+@import "burger.css";

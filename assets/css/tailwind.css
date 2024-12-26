@@ -32,7 +32,7 @@
 
 @layer components {
     header.gh-head {
-        @apply sticky mb-3 top-0 bg-light-gray dark:bg-dark z-50;
+        @apply sticky mb-3 top-0 z-50 bg-light-gray dark:bg-dark;
     }
 
     .gh-head-inner {
@@ -57,6 +57,10 @@
 
     .nav li a {
         @apply relative block rounded-md border-0 px-4 py-2 text-black hover:bg-primary hover:text-light dark:text-light dark:hover:bg-primary-darker dark:hover:text-light-white;
+    }
+
+    .nav .nav-current > a {
+        @apply bg-primary text-light dark:bg-primary-darker dark:text-light-white;
     }
 
     .gh-head-actions-list {
@@ -142,8 +146,8 @@
         @apply my-5 max-w-3xl first:my-0 last:my-0 lg:text-lg;
     }
 
-    .gh-content code {
-        @apply rounded-md font-mono lg:text-base;
+    .gh-content :not(pre) code {
+        @apply rounded-md font-mono lg:text-base bg-light-white p-1 dark:bg-dark-lighter;
     }
 
     .gh-content blockquote {
@@ -151,7 +155,7 @@
     }
 
     .gh-content pre {
-        @apply my-6 overflow-x-auto bg-black py-3 pl-3 font-mono text-sm text-light-gray sm:text-base md:max-w-screen-md lg:max-w-full dark:bg-gray dark:text-dark;
+        @apply my-6 overflow-x-auto bg-light-white py-3 pl-3 font-mono text-sm text-dark sm:text-base md:max-w-screen-md lg:max-w-full dark:bg-dark-lighter dark:text-light-white;
     }
 
     .gh-content h1,
@@ -215,29 +219,8 @@
     .gh-readmore-prev > a {
         @apply flex w-full space-x-5 border-0;
     }
-}
 
-pre {
-    code {
-        color: inherit;
-        background-color: transparent;
-        padding: 0;
-        display: block;
-    }
-    .line-number {
-        display: block;
-        float: left;
-        margin: 0 1em 0 -1em;
-        border-right: 1px solid #ddd;
-        text-align: right;
-        span {
-            display: block;
-            padding: 0 0.5em 0 1em;
-            color: #ccc;
-        }
-    }
-    .cl {
-        display: block;
-        clear: both;
+    .gh-article footer {
+        @apply pt-5;
     }
 }
