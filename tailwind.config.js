@@ -21,7 +21,7 @@ export default {
             // current: "currentColor",
             dark: {
                 DEFAULT: "rgb(32,32,32)", //#111827
-                lighter: "rgb(50,50,50)", //#161e2d
+                lighter: "rgb(46,46,46)", //#161e2d
                 gray: "#777",
             },
 

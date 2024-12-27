@@ -9,21 +9,21 @@
         </h1>
       </div>
     </a>
-    <a class="gh-burger" role="button" aria-label="menu">
+    {{!-- <a class="gh-burger" role="button" aria-label="menu">
       <div class="gh-burger-box">
         <div class="gh-burger-inner"></div>
       </div>
-    </a>
+    </a> --}}
   </div>
   <div class="gh-head-menu">
     {{navigation}}
   </div>
-  <div class="gh-head-actions ml-auto">
+  <div class="gh-head-actions mx-auto self-center md:ml-auto md:mr-0">
     <div class="gh-head-actions-list">
+      {{search}}
       <div x-data :class="$store.darkMode.on">
           {{> "switcher" }}
       </div>
-      {{search}}
       {{!-- {{#if @site.members_enabled}}
       {{^if @member}}
       <a class="gh-button" href="{{@site.signup_url}}">{{t "Subscribe"}}</a>
@@ -33,4 +33,14 @@
       {{/if}} --}}
     </div>
   </div>
+  <div x-data="{ open: false }">
+    <button @click="open = ! open" class="block sm:hidden text-black dark:text-light-white p-2 pr-5">
+      {{> "icons/burger" }}
+    </button>
+
+    <div x-show="open" x-transition class="gh-head-menu-dropdown" @click.outside="open = false">
+      {{navigation}}
+    </div>
+  </div>
+
 </nav>

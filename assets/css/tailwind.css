@@ -36,7 +36,7 @@
     }
 
     .gh-head-inner {
-        @apply md:flex max-w-7xl px-5 lg:px-0 py-4 mx-auto justify-between sm:justify-start md:justify-center lg:justify-start md:py-2;
+        @apply flex max-w-7xl px-0 sm:px-5 xl:px-0 py-2 mx-auto md:justify-between lg:justify-start;
     }
 
     .gh-head-logo {
@@ -51,16 +51,30 @@
         @apply hidden items-center justify-center sm:mx-8 sm:flex lg:mx-10;
     }
 
-    .nav {
+    .gh-head-menu .nav {
         @apply flex list-none flex-col flex-wrap items-center space-x-0 space-y-1 sm:flex-row sm:space-x-3 sm:space-y-0;
     }
-
-    .nav li a {
+    /* .gh-head-menu .nav li a {
         @apply relative block rounded-md border-0 px-4 py-2 text-black hover:bg-primary hover:text-light dark:text-light dark:hover:bg-primary-darker dark:hover:text-light-white;
+    } */
+
+    .gh-head-menu .nav li a {
+        @apply text-lg relative block border-0 px-4 py-1 text-black dark:text-light before:block hover:before:absolute hover:before:bottom-1 hover:before:left-0 hover:before:w-full hover:before:h-3 hover:before:bg-primary/50 hover:dark:before:bg-primary-darker/50;
     }
 
-    .nav .nav-current > a {
-        @apply bg-primary text-light dark:bg-primary-darker dark:text-light-white;
+    .gh-head-menu .nav .nav-current > a {
+        @apply before:block before:absolute before:bottom-1 before:left-0 before:w-full before:h-2 before:bg-primary/50 dark:before:bg-primary-darker/50;
+    }
+
+    .gh-head-menu-dropdown {
+        @apply absolute z-auto right-0 w-dvw bg-light-gray/85 dark:bg-dark/85 rounded-lg;
+    }
+    .gh-head-menu-dropdown .nav {
+        @apply flex list-none flex-col;
+    }
+
+    .gh-head-menu-dropdown .nav li a {
+        @apply block text-center py-3 border-0 uppercase text-lg;
     }
 
     .gh-head-actions-list {
