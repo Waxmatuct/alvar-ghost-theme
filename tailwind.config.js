@@ -3,7 +3,7 @@
 // const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
     content: ["./*.hbs", "./**/*.hbs"],
-    darkMode: "media", // or 'media' or 'class'
+    darkMode: "selector", // or 'media' or 'class'
     theme: {
         extend: {
             boxShadow: {
@@ -20,8 +20,8 @@ export default {
         colors: {
             // current: "currentColor",
             dark: {
-                DEFAULT: "#181818", //#111827
-                lighter: "#202020", //#161e2d
+                DEFAULT: "rgb(32,32,32)", //#111827
+                lighter: "rgb(50,50,50)", //#161e2d
                 gray: "#777",
             },
 

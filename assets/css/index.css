@@ -27,3 +27,4 @@ production stylesheet in assets/built/screen.css using: npm run dev
 @import "tailwind.css";
 @import "pre.css";
 @import "burger.css";
+@import "switcher.css";

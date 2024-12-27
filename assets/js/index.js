@@ -1,11 +1,17 @@
 // JavaScript files are compiled and minified during the build process to the assets/built folder. See available scripts in the package.json file.
 
 // Import JS
-import menuOpen from "./menuOpen";
-import infiniteScroll from "./infiniteScroll";
+// import menuOpen from "./menuOpen";
+// import infiniteScroll from "./infiniteScroll";
 import codeBlock from "./codeBlock";
 
-// Call the menu and infinite scroll functions
-menuOpen();
-infiniteScroll();
+// // Call the menu and infinite scroll functions
+// menuOpen();
+// infiniteScroll();
 codeBlock();
+
+import Alpine from "alpinejs";
+import switcher from "./switcher";
+window.Alpine = Alpine;
+switcher();
+Alpine.start();
