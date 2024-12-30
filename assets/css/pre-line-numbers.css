@@ -1,20 +1,20 @@
-pre {
-    code {
+.gh-content pre {
+    /* code {
         color: inherit;
         background-color: transparent;
         padding: 0;
         display: block;
-    }
+    } */
     .line-number {
         display: block;
         float: left;
         margin: 0 1em 0 -1em;
-        border-right: 1px solid #ddd;
+        border-right: 1px solid #989fab;
         text-align: right;
         span {
             display: block;
             padding: 0 0.5em 0 1em;
-            color: #ccc;
+            color: #989fab;
         }
     }
     .cl {

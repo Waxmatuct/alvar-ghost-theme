@@ -9,10 +9,12 @@ export default function switcher() {
                 htmlElement.setAttribute("theme", "dark");
                 htmlClass.add("dark");
                 this.on = true;
+                console.log("dark");
             } else {
                 htmlElement.setAttribute("theme", "light");
                 htmlClass.remove("dark");
                 this.on = false;
+                console.log("light");
             }
         },
         toggle() {

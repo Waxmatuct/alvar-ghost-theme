@@ -21,9 +21,7 @@
   <div class="gh-head-actions mx-auto self-center md:ml-auto md:mr-0">
     <div class="gh-head-actions-list">
       {{search}}
-      <div x-data :class="$store.darkMode.on">
-          {{> "switcher" }}
-      </div>
+      {{> "switcher" }}
       {{!-- {{#if @site.members_enabled}}
       {{^if @member}}
       <a class="gh-button" href="{{@site.signup_url}}">{{t "Subscribe"}}</a>

@@ -52,14 +52,14 @@
     }
 
     .gh-head-menu .nav {
-        @apply flex list-none flex-col flex-wrap items-center space-x-0 space-y-1 sm:flex-row sm:space-x-3 sm:space-y-0;
+        @apply flex list-none flex-col flex-wrap items-center space-x-0 space-y-1 sm:flex-row sm:space-x-10 sm:space-y-0;
     }
     /* .gh-head-menu .nav li a {
         @apply relative block rounded-md border-0 px-4 py-2 text-black hover:bg-primary hover:text-light dark:text-light dark:hover:bg-primary-darker dark:hover:text-light-white;
     } */
 
     .gh-head-menu .nav li a {
-        @apply text-lg relative block border-0 px-4 py-1 text-black dark:text-light before:block hover:before:absolute hover:before:bottom-1 hover:before:left-0 hover:before:w-full hover:before:h-3 hover:before:bg-primary/50 hover:dark:before:bg-primary-darker/50;
+        @apply text-lg relative block border-0 p-1 text-black dark:text-light before:block hover:before:absolute hover:before:bottom-1 hover:before:left-0 hover:before:w-full hover:before:h-3 hover:before:bg-primary/50 hover:dark:before:bg-primary-darker/50;
     }
 
     .gh-head-menu .nav .nav-current > a {
@@ -85,12 +85,8 @@
         @apply block rounded-md border-0 bg-primary px-4 py-2 text-light hover:text-light dark:text-light-white dark:hover:bg-primary-darker dark:hover:text-light-white;
     }
 
-    .gh-page {
-        @apply max-w-7xl mx-auto;
-    }
-
     .gh-container {
-        @apply space-y-5;
+        @apply mx-auto max-w-7xl space-y-5;
     }
 
     .gh-postfeed {
@@ -137,7 +133,11 @@
     }
 
     .gh-article {
-        @apply mx-auto max-w-4xl px-2 lg:px-0;
+        @apply mx-auto px-2 lg:px-0;
+    }
+
+    .gh-header {
+        @apply mx-auto max-w-screen-md;
     }
 
     .gh-title {
@@ -152,70 +152,99 @@
         @apply text-center text-sm mb-10;
     }
 
-    /* .gh-content {
-        @apply space-y-5;
-    } */
+    .gh-content {
+        p,
+        :is(h1, h2, h3, h4, h5, h6),
+        blockquote,
+        ol li,
+        ul li,
+        .kg-toggle-card,
+        .kg-gallery-card,
+        .kg-image-card,
+        hr,
+        .kg-embed-card {
+            @apply mx-auto max-w-3xl;
+        }
 
-    .gh-content p {
-        @apply my-5 max-w-3xl first:my-0 last:my-0 lg:text-lg;
-    }
+        .kg-width-wide,
+        table,
+        iframe {
+            @apply mx-auto my-4 max-w-5xl;
+        }
+        p {
+            @apply my-5 first:my-0 last:my-0 lg:text-lg;
+        }
 
-    .gh-content :not(pre) code {
-        @apply rounded-md font-mono lg:text-base bg-light-white p-1 dark:bg-dark-lighter;
-    }
+        :not(pre) code {
+            @apply rounded-md font-mono lg:text-base bg-light-white p-1 dark:bg-dark-lighter;
+        }
 
-    .gh-content blockquote {
-        @apply my-5 border-l-7 border-primary py-1 pl-3 italic dark:border-primary-darker;
-    }
+        blockquote {
+            @apply my-5 border-l-7 border-primary py-1 pl-3 italic dark:border-primary-darker;
+        }
 
-    .gh-content pre {
-        @apply my-6 overflow-x-auto bg-light-white py-3 pl-3 font-mono text-sm text-dark sm:text-base md:max-w-screen-md lg:max-w-full dark:bg-dark-lighter dark:text-light-white;
-    }
+        pre {
+            @apply mx-auto my-6 rounded-md overflow-x-auto bg-light-white py-3 pl-3 font-mono text-sm text-dark sm:text-base md:max-w-screen-md lg:max-w-5xl dark:bg-dark-lighter dark:text-light-white;
+        }
 
-    .gh-content h1,
-    .gh-content h2,
-    .gh-content h3 {
-        @apply mb-3 mt-7 font-bold;
-    }
+        h1,
+        h2,
+        h3 {
+            @apply mb-3 mt-7 font-bold;
+        }
 
-    .gh-content .caption {
-        @apply mb-5 max-w-3xl text-center text-sm;
-    }
+        .caption {
+            @apply mb-5 max-w-3xl text-center text-sm;
+        }
 
-    .gh-content table {
-        @apply my-5;
-    }
-    .gh-content table caption {
-        @apply my-2;
-    }
-    .gh-content th {
-        @apply border px-4 py-3 text-center font-semibold uppercase;
-    }
+        table {
+            @apply my-5;
+        }
+        table caption {
+            @apply my-2;
+        }
 
-    .gh-content td {
-        @apply text-center py-3 px-4 border;
-    }
+        th {
+            @apply border px-4 py-3 text-center font-semibold uppercase;
+        }
 
-    .gh-content ol li,
-    .gh-content ul li {
-        @apply list-inside;
-    }
+        td {
+            @apply text-center py-3 px-4 border;
+        }
 
-    .gh-content ol,
-    .gh-content ul {
-        @apply ml-4 my-4;
-    }
+        ol li,
+        ul li {
+            @apply list-inside;
+        }
 
-    .gh-content ol li {
-        @apply list-decimal;
-    }
+        ol,
+        ul {
+            @apply ml-4 my-4;
+        }
 
-    .gh-content ul li {
-        @apply list-disc;
-    }
+        ol li {
+            @apply list-decimal;
+        }
 
-    .gh-content img {
-        @apply my-4 max-w-full rounded-md;
+        ul li {
+            @apply list-disc;
+        }
+
+        .kg-header-card-image {
+            @apply my-0;
+        }
+
+        figure {
+            @apply my-4;
+        }
+
+        figcaption {
+            @apply italic text-center text-sm;
+        }
+
+        img {
+            @apply rounded-md;
+        }
     }
 
     .gh-readmore {
@@ -225,6 +254,7 @@
     .gh-readmore-inner {
         @apply mt-5 flex w-full justify-around;
     }
+
     .gh-readmore svg {
         @apply max-w-5;
     }
