@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply bg-light-gray text-black font-sans dark:bg-dark dark:text-gray;
+        @apply bg-light-gray text-black font-sans dark:bg-dark dark:text-gray antialiased;
     }
 
     h1,
@@ -175,8 +175,15 @@
             @apply my-5 first:my-0 last:my-0 lg:text-lg;
         }
 
+        .kg-width-full {
+            @apply max-w-full;
+            .kg-image {
+                @apply mx-auto;
+            }
+        }
+
         :not(pre) code {
-            @apply rounded-md font-mono lg:text-base bg-light-white p-1 dark:bg-dark-lighter;
+            @apply rounded-md font-mono bg-light-white p-1 dark:bg-dark-lighter;
         }
 
         blockquote {

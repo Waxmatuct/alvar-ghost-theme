@@ -4,7 +4,7 @@
 // import menuOpen from "./menuOpen";
 // import infiniteScroll from "./infiniteScroll";
 import codeBlock from "./codeBlock";
-codeBlock();
+// codeBlock();
 
 // // Call the menu and infinite scroll functions
 // menuOpen();
